@@ -31,7 +31,7 @@ function FetchOldValue($_MHSQLAlias, $_MHDatabaseName, $_OperationID){
     $oldValuesObject = @()
 
     $oldValues | ForEach-Object{
-        $properties = @{
+        $properties = [ordered]@{
             "Attribute" = $_.name
             "Old Value" = $_.values.value
         }
